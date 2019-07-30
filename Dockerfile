@@ -15,7 +15,7 @@ RUN yum -y install \
     python3-dnf \
     python2-dnf \
     python34 \
-  && dnf clean all
+  && yum clean all
 
 # Install Ansible inventory file.
 RUN mkdir -p /etc/ansible
