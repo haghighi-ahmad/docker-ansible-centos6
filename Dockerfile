@@ -12,6 +12,7 @@ RUN yum -y install \
     ansible \
     sudo \
     which \
+    initscripts \
     python3-dnf \
     python2-dnf \
     python34 \
@@ -22,4 +23,4 @@ RUN mkdir -p /etc/ansible
 RUN echo -e '[local]\nlocalhost ansible_connection=local ' > /etc/ansible/hosts
 
 VOLUME ["/sys/fs/cgroup", "/tmp", "/run"]
-CMD ["/usr/sbin/init"]
+CMD ["/sbin/init"]
